@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+		<title>Triangulate 1.1</title>
+		<meta name="author" content="Per Jenelius">
+		<meta name="description" content="A js app that counts the parts of i triangle">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="stylesheet" href="styles.css" type="text/css">
+	</head>
+	<body>
+		<div class="envelope">
+			<div class="total-overlay">
+				<p>Total triangles: <span id="overlay-no">27</span></p>
+			</div>
+			<canvas id="canvas">
+			</canvas>
+			<div class="controls">
+				<div class="formRow">
+					<p><strong>Number of segments per side</strong></p>
+					<input id="minsSeg" value="-" type="button" class="niceBtn btnLeft" onclick="changeSegment('mins')" />
+					<input id="textSeg" value="4" type="text" class="niceTxt" onchange="changeSegment('text')" />
+					<input id="plusSeg" value="+" type="button" class="niceBtn btnRight" onclick="changeSegment('plus')" />
+				</div>
+				<div class="formRow colorRow">
+					<p><strong>Highlight color</strong></p>
+					<div>
+						<span>Red</span>
+						<input type="range" min="0" max="255" value="0" class="colorSlider" id="redRange" onchange="adjustColor()">
+					</div>
+					<div>
+						<span>Green</span>
+						<input type="range" min="0" max="255" value="0" class="colorSlider" id="greenRange" onchange="adjustColor()">
+					</div>
+					<div>
+						<span>Blue</span>
+						<input type="range" min="0" max="255" value="205" class="colorSlider" id="blueRange" onchange="adjustColor()">
+					</div>
+					<div>
+						<span>Opacity</span>
+						<input type="range" min="0" max="10" value="10" class="colorSlider" id="opacRange" onchange="adjustColor()">
+					</div>
+				</div>
+				<div class="formRow">
+					<p><strong>Highlighted triangle</strong></p>
+					<div class="explSelect" id="explRow2"></div>
+					<select id="explanation"></select>
+					<input type="button" value="-" class="niceBtn btnLeft" onclick="setTriIndex('mins')" />
+					<input type="text" value="1 / 1" class="niceTxt txtWide" disabled id="explTxt" />
+					<input type="button" value="+" class="niceBtn btnRight" onclick="setTriIndex('plus')" />
+				</div>
+			</div>
+		</div>
+		<script src="scripts.js"></script>
+	</body>
+</html>

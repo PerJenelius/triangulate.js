@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    background-color: #e5e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.envelope {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+    padding: 1em;
+}
+
+p {
+    margin: 0 0 0.75em 0;
+    cursor: default;
+}
+
+.total-overlay {
+    position: relative;
+    top: 1em;
+    left: 1em;
+}
+
+.total-overlay p {
+    display: inline-block;
+    margin: auto;
+    background-color: #0000cd;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    border-radius: 20px;
+    padding: 3px 8px;
+}
+
+#canvas {
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 6px;
+    margin: -20px 1em 0 0;
+    width: calc(100% - 300px - 5em - 5px);
+}
+
+.controls {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    margin: -20px 1em 0 0;
+}
+
+.formRow {
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 6px;
+    margin-bottom: 1em;
+}
+
+.colorRow span {
+    display: inline-block;
+    vertical-align: top;
+    width:75px;
+}
+
+.colorSlider {
+    margin: 0;
+    width: 180px;
+}
+
+.niceBtn {
+    height: 25px;
+    padding: 1px 4px 2px 4px;
+    background-color: #0000cd;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-weight: 900;
+    width: 24px;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.btnLeft {
+    border-radius: 3px 0 0 3px;
+}
+
+.btnRight {
+    border-radius: 0 3px 3px 0;
+}
+
+.niceNbr {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    font-size: 14px;
+    width: 95px;
+    border-radius: 3px;
+    padding: 4px 0 4px 6px;
+}
+
+.niceTxt {
+    color: #000000;
+    height: 23px;
+    width: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    vertical-align: top;
+    text-align: center;
+    margin: 0 -5px 0 -5px;
+    padding: 0 6px;
+    border: 1px solid #0000cd;
+    cursor: default;
+}
+
+.niceTxt.txtWide {
+    width: 90px;
+}
+
+.explSelect {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.explDropdown {
+    border: 1px solid #0000cd;
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 3px 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.explText {
+    display: inline-block;
+    width: 100px;
+}
+
+.explText span {
+    margin-top: 3px;
+}
+
+.explBtns {
+    display: inline-block;
+}
+
+@media screen and (max-width: 800px) {
+    #canvas {
+        display: block;
+        width: calc(100% - 4em);
+        margin: -20px 0 1em 0;
+    } 
+    .controls {
+        display: block;
+        width: calc(100% - 2em);
+        margin: 0;
+    }
+}
